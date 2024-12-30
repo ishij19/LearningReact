@@ -20,6 +20,12 @@ const removeValue=()=>{
   setCounter(Counter-1)
 }
 
+const resetValue=()=>{
+  console.log("clicked",Counter);
+  setCounter(0)
+  }
+
+
   return (
     <>
       <h1>chai aur react</h1>
@@ -29,9 +35,15 @@ const removeValue=()=>{
       onClick={addValue}
       >Add value {Counter}</button>
       <br />
+      <br/>
       <button
       onClick={removeValue}
       >remove value {Counter}</button>
+      <br />
+      <br/>
+      <button
+      onClick={resetValue}
+      >reset value {Counter}</button>
       <p>footer: {Counter}</p>
 
     </>
