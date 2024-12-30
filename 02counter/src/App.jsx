@@ -5,13 +5,19 @@ import './App.css'
 
 function App() {
 
-  const [Counter,setCounter]=  useState(15)
+  let [Counter,setCounter]=  useState(15)
 
-let Counter=15
+//let Counter=15
 const addValue=()=>{
   console.log("clicked",Counter);
-  Counter=Counter+1
+  //Counter=Counter+1
+  setCounter(Counter+1)
   
+}
+
+const removeValue=()=>{
+  console.log("clicked",Counter);
+  setCounter(Counter-1)
 }
 
   return (
@@ -23,7 +29,9 @@ const addValue=()=>{
       onClick={addValue}
       >Add value {Counter}</button>
       <br />
-      <button>remove value {Counter}</button>
+      <button
+      onClick={removeValue}
+      >remove value {Counter}</button>
       <p>footer: {Counter}</p>
 
     </>
